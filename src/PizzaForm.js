@@ -120,7 +120,7 @@ export default function PizzaForm(props) {
                 <button disabled={disabled} name='submitButton'>Order Now!</button>
             </form>
             <p>Lost your appetite? Click here to go back home:</p>
-            <button onClick = {backHome} >I don't want hot, delicious pizza</button>
+            <button onClick = {backHome} name='backHomeButton' >I don't want hot, delicious pizza</button>
         </div>
     )
 }

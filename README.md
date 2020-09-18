@@ -67,9 +67,9 @@ Your finished project must include all of the following requirements:
 
 Implement the following tests in Cypress:
 
-- [ ] test that you can add text to the box
-- [ ] test that you can select multiple toppings
-- [ ] test that you can submit the form
+- [X] test that you can add text to the box
+- [X] test that you can select multiple toppings
+- [X] test that you can submit the form
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
@@ -79,8 +79,8 @@ After finishing your required elements, you can push your work further. These go
 
 - [ ] Toggle form component for gluten free crust
 - [ ] Turn form element sections into nested routes
-- [ ] Test more of the application with Cypress
-- [ ] Build UI for the eventuality of a network error when POSTing the order
+- [X] Test more of the application with Cypress
+- [X] Build UI for the eventuality of a network error when POSTing the order
 - [ ] Add functionality to your order button that it leads to a Congrats! Pizza is on it's way! page **and** returns a database record of the whole order
 
 ## FAQs

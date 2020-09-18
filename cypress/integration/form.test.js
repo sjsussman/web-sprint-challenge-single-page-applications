@@ -9,6 +9,7 @@ describe('pizza-order app', () => {
     const pepperoni = () => cy.get('input[name=pepperoni]')
     const sardines = () => cy.get('input[name=sardines]')
     const submitButton = () => cy.get('button[name=submitButton')
+    const backHome = () => cy.get('button[name=backHomeButton')
 
     it('shouldstart', () => {
       expect(1 + 2).to.equal(3)
@@ -51,6 +52,14 @@ describe('pizza-order app', () => {
         .click()
         cy.contains('Steven').should('exist')
         cy.contains('Large').should('exist')
+    })
+
+    it('back home button should return user back to the home page', () =>{
+        orderButton().click()
+        cy.contains('Order Form').should('exist')
+        backHome().click()
+        cy.contains('Lambda Eats').should('exist')
+
     })
 
 })

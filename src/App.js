@@ -35,14 +35,14 @@ export default function App(){
 
 
 const postNewOrder = newOrder =>{
-  axios.post('https://reqres.in/api/users', newOrder)
+  axios.post('https://reqres.in/api/use', newOrder)
   .then(res => {
     setOrder([...order, newOrder])
     setFormValues(initialFormValues)
     console.log(newOrder)
   })
   .catch(err =>{
-    debugger
+    alert("There was an error submitting your order. Please reload the page and try again")
     console.log(err)
   })
 }
