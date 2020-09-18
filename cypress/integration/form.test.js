@@ -3,11 +3,12 @@ describe('pizza-order app', () => {
       cy.visit('http://localhost:3000')
     })
 
+    const orderButton = () => cy.get('button[name=orderButton]')
     const nameInput = () => cy.get('input[name=name]')
     const sizeInput = () => cy.get('select')
     const pepperoni = () => cy.get('input[name=pepperoni]')
     const sardines = () => cy.get('input[name=sardines]')
-    const submit = () => cy.get('button')
+    const submitButton = () => cy.get('button[name=submitButton')
 
     it('shouldstart', () => {
       expect(1 + 2).to.equal(3)
@@ -15,6 +16,8 @@ describe('pizza-order app', () => {
     
     //test that you can add text to the box
     it('should get the name and type in it', () =>{
+        orderButton().click()
+        cy.contains('Order Form').should('exist')
         nameInput()
         .type('Steven')
         .should('have.value', 'Steven')
@@ -22,23 +25,27 @@ describe('pizza-order app', () => {
 
     //test that you can select multiple toppings
     it('should be able to select multiple toppings', () =>{
+        orderButton().click()
+        cy.contains('Order Form').should('exist')
         pepperoni()
         .check()
-        .should('have.value', true)
+        .should('have.value', 'on')
         sardines()
         .check()
-        .should('have.value', true)
+        .should('have.value', 'on')
     })
 
     //test that you can submit the form
     it('should fill out everything and submit', () =>{
+        orderButton().click()
+        cy.contains('Order Form').should('exist')
         nameInput()
         .type('Steven')
         .should('have.value', 'Steven')
         sizeInput()
         .select('Large')
-        .should('have.value', 'Large')
-        submit()
+        .should('have.value', 'large')
+        submitButton()
         .click()
         cy.contains('Steven').should('exist')
         cy.contains('Large').should('exist')

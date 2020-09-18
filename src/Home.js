@@ -21,7 +21,7 @@ export default function Home() {
       <p>Hungry? Order a Pizza Here:</p>
       <button
         onClick={orderForm}
-        className='md-button shop-button'
+        name='orderButton'
       >
         Order Now!
       </button>
