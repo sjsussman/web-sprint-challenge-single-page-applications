@@ -35,9 +35,9 @@ export default function App(){
 
 
 const postNewOrder = newOrder =>{
-  axios.post('https://reqres.in/', newOrder)
+  axios.post('https://reqres.in/api/users', newOrder)
   .then(res => {
-    setOrder([newOrder])
+    setOrder([...order, newOrder])
     setFormValues(initialFormValues)
     console.log(newOrder)
   })
