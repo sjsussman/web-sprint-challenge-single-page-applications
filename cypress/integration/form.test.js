@@ -29,10 +29,12 @@ describe('pizza-order app', () => {
         cy.contains('Order Form').should('exist')
         pepperoni()
         .check()
-        .should('have.value', 'on')
         sardines()
         .check()
         .should('have.value', 'on')
+        pepperoni()
+        .should('have.value', 'on')
+
     })
 
     //test that you can submit the form
