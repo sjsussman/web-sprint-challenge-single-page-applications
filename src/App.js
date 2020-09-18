@@ -8,6 +8,7 @@ import * as yup from 'yup'
 import PizzaForm from './PizzaForm'
 import PizzaOrder from './PizzaOrder'
 import Home from './Home'
+// import Congrats from './Congrats'
 
 const initialFormValues = {
   name: '',
@@ -104,9 +105,15 @@ useEffect(() =>{
          />
       </Route>
 
+      {/* <Route path ='/congrats'>
+        <Congrats />
+      </Route> */}
+
       <Route path='/'>
         <Home />
       </Route>
+
+
     </Switch>
 
       {
