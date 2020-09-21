@@ -106,7 +106,9 @@ useEffect(() =>{
       </Route>
 
       {/* <Route path ='/congrats'>
-        <Congrats />
+        <Congrats
+          newOrder = {order} 
+        />
       </Route> */}
 
       <Route path='/'>

@@ -11,11 +11,10 @@ export default function PizzaOrder({ details }) {
       <p>Size: {details.size}</p>
 
       {
-        !!details.toppings && !!details.toppings.length &&
         <div>
           Toppings:
           <ul>
-            {details.toppings.map((like, idx) => <li key={idx}>{like}</li>)}
+            {details.toppings.map((top, idx) => <li key={idx}>{top}</li>)}
           </ul>
         </div>
       }
